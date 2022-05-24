@@ -1,0 +1,180 @@
+@font-face {
+    font-family: 'android';
+    src: url('fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'bebas';
+    src: url('fontes/BebasNeue-Regular.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+/*posso usar :root para declarar variaveis
+:root{
+    --var1: (algo);
+}
+*{
+    padding: 0px;
+    margin: 0px;
+}
+posso fazer isso para retirar toda a formatação de tudo primeiramente para poder trabalhar depois
+
+podemos utilizar min-width e max-width de uma caixa para fazer a responsividade do site também, testar depois
+pelo visto os valores mais importantes são 320 e 800 pixeis (interessante)
+
+para o video também podemos utilizar outro tipo de combinação como
+ (caixa){
+    cor fundo
+    margem 0px -20px 30px -20px
+    padding 20px
+    padding-bottom 59%
+    position relative
+}
+(iframe){
+    position absolute
+    top 5%
+    left 5%
+    width 90%
+    height 90%
+}
+*/
+body{
+    background-color: #FAF3DD;
+    padding-top: 0px;
+    margin: 0px;
+}
+header{
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.288);
+    font-family: 'bebas',cursive;
+    text-align: center;
+    color: white;
+    background-image: linear-gradient(180deg,#C8D5B9,#6eac8f,#4A7C59);
+}
+header > h1{
+    margin: 0px;
+    padding: 20px;
+}
+header > p{
+    padding: 10px;
+    text-align: center;
+}   
+nav {   
+    box-shadow: 0px 9px 8px rgba(0, 0, 0, 0.219);
+    text-align: center;
+    font: bold 14px Arial, Helvetica, sans-serif;
+    background-color: #4A7C59;
+    padding: 20px;
+}
+nav > a{
+    padding: 20px 10px;
+    text-decoration: none;
+    color: white;
+    transition-duration: 0.5s;
+}
+nav > a:hover{
+    border-radius: 5px;
+    background-color: #6eac8f;
+}
+
+main{
+    padding-bottom: 10px;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.380);
+    font: normal 14px Arial, Helvetica, sans-serif;
+    margin: auto;
+    width: 80%;
+    max-width: 1200px;
+    background-color: white;
+}
+main > h1{
+    padding: 20px 10px 10px 10px;
+    margin: 0%;
+    font-family: 'android';
+    color: #4A7C59;
+}
+p{
+    text-indent: 30px;
+    line-height: 2em;
+    margin: 0px;
+    padding: 10px 10px 10px 10px;
+    text-align:justify;
+}
+span{
+    text-indent: 0px;
+}
+.link{
+    font: bolder 14px Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: #4A7C59;
+}
+.link::after{
+    content: '\1F517';
+}
+.link:hover{
+    text-decoration: underline;
+}
+img{
+    display: block;
+    margin: 20px auto 20px auto;
+}
+picture > img {
+    margin: 20px auto 20px auto;
+    width: 100%;
+}
+section#panodefundo{
+    padding: 3%;
+    height: 500px;
+    background-color: #4A7C59;
+}
+section > iframe{
+    display: block;
+    margin: auto;
+    height: 100%;
+    width: 95%;
+}
+.subtitulo{
+    margin: 0%;
+    font-family: 'android';
+    padding-left: 5px;
+    background-image: linear-gradient(to right,#C8D5B9,transparent);
+    color: #4A7C59;
+}
+.negrito{
+    color: #4A7C59;
+    font: bold 14px Arial, Helvetica, sans-serif;
+    display: inline-block;
+    margin: 0px;
+}
+aside{
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.380);
+    border-radius: 10px;
+    margin: 2%;
+    background-color: #C8D5B9;
+}
+aside > h3{
+    padding: 10px;
+    border-radius: 10px 10px 0px 0px;
+    color: white;
+    background-color: #4A7C59;
+    margin: 0px;
+}
+aside > ul{
+    list-style-type: '\2714\00A0\00A0';
+    list-style-position: inside;
+    columns: 2;
+}
+
+footer{
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    margin-top: 15px;
+    background-color: #4A7C59;
+}
+footer > p {
+    text-align: center;
+}
+footer > p > span{
+    font-weight: bolder;
+}

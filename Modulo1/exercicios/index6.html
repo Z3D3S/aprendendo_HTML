@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Semântica e Formatação de Textos</title>
+    <!--trecho em css-->
+    <!--aqui estamos definindo o estilo das tags globalmente-->
+    <style>
+        mark{
+            background-color: white;
+        }
+        body{
+            background-color: rgb(7, 7, 128);
+        }
+    </style>
+</head>
+<body>
+    <!--(crtl+shift+p) comando para ajudar a envelopar texto em tags(wrap witha abb**reviation)-->
+    <!--é interessante antes de usar um tag procurar na internet se essa tag está depreciada-->
+    <!--Html 5 foca em semantica significado em um contexto-->
+    <p>Eu moro na <address>Rua dos Capixabas, 229 - Botafogo - RJ</address></p>
+    <h1>Principais formatações</h1>
+    <h2>Negrito / Destaque</h2>
+    <p>Nessa Frase temos um <b>termo em negrito</b> usando a tag &lt;b&gt; e &lt;/b&gt;(não semantica)</p>
+    <p>Nessa Frase temos um <strong>termo em negrito</strong> usando a tag &lt;strong&gt; e &lt;/strong&gt;(semantica)</p>
+    <h2>Italico /Ênfase</h2>
+    <p>Nesta frase, temos um <i>termo em itálico</i> usando a tag &lt;i&gt; e &lt;/i&gt;(não semantica)</p>
+    <p>Nesta frase, temos um <em>termo em ênfase</em> usando a tag &lt;em&gt; e &lt;/em&gt;(semantica)</p>
+    <h2>Texto Marcado</h2>
+    <!--estamos mudando o estilo da marcação pontualmente-->
+    <p>Podemos também criar <mark style="background-color: rgb(1, 61, 1);">um texto marcado</mark> usando a tag &lt;mark&gt; e &lt;/mark&gt;</p>
+    <p>E no outro parágrafo, temos também  <mark>algo marcado</mark></p>
+    <h2>Texto grande e pequeno</h2>
+    <!--vale notar que a marcação big está depreciada e o small ainda continua sendo suportado-->
+    <p>Estamos criando um <big>texto grande</big> com a tag &lt;big&gt; e &lt;/big&gt; e um <small>texto pequeno</small> com a tag &lt;small&gt; e &lt;/small&gt;</p>
+    <h2>Texto excluido</h2>
+    <p>Podemos marcar <del>um texto como excluído</del> com a tag &lt;del&gt; e &lt;/del&gt; para dar uma ênfase e indicar que ele foi adicionado depois.(semantico)</p>
+    <h2>Texto inserido</h2>
+    <p>Podemos marcar <ins>um texto como inserido</ins> com a tag &lt;ins&gt; e &lt;/ins&gt; para dar uma ênfase e indicar que ele foi adicionado depois(semantico)</p>
+    <p>Existe também o <u>sublinhado</u> com a tag &lt;u&gt; e &lt;/u&gt;(não semantico)</p>
+    <h2>Texto sobrescrito</h2>
+    <p>Para inserir coisas do tipo x<sup>20</sup>+3 utilizamos a tag &lt;sup&gt; e &lt;/sup&gt;</p>
+    <h2>Texto subscrito</h2>
+    <p>Para inserir coisas do tipo H <sub>2</sub>O utilizamos a tag &lt;sub&gt; e &lt;/sub&gt;</p>
+</body>
+</html>
