@@ -49,7 +49,7 @@ header{
     font-family: 'bebas',cursive;
     text-align: center;
     color: white;
-    background-image: linear-gradient(180deg,#C8D5B9,#6eac8f,#4A7C59);
+    background-image: linear-gradient(to bottom,#C8D5B9,#4A7C59);
 }
 header > h1{
     margin: 0px;

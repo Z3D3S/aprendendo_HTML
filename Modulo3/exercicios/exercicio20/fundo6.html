@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posicionamento 3</title>
+    <style>
+        body{
+            margin: 0px;
+        }
+        /*para centralizarmos uma caixa em relação a outra caixa precisamos definir a posição relativa
+        e absoluta depois precisamos colocar left 50% e top 50% e depois transform translate (-50%,-50%)*/
+        section#container{
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+            background: purple url('imagens/target001.png') center center /100% 100% no-repeat scroll;
+        }
+        article#conteudo{
+            position: absolute;
+            height: 200px;
+            width: 400px;
+            background: yellow url('imagens/target001.png') center center /100% 100% no-repeat scroll;
+            
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+    </style>
+</head>
+<body>
+    <section id="container">
+        <article id="conteudo">
+
+        </article>
+    </section>
+</body>
+</html>
