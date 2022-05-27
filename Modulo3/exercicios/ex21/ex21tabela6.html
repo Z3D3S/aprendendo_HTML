@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas 6 (tabela complexa)</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        /*para fazer algo parecido com o efeito parallax com
+        tabelas é só usar o position: relativo em table e position: sticky para colar o cabeçalho da tabela no topo do navegador. Depois precisamos definir a onde que ele vai colocar com top: -1px e colocar o background o cabeçalho*/
+        table{
+            position: relative;
+            border-collapse: collapse;
+            width: 400px;
+        }
+        td, th{
+            padding: 10px;
+            border: 1px solid black;
+        }
+        thead > tr > th{
+            position: sticky;
+            top: -1px;
+            background-color: rgb(82, 77, 77);;
+        }
+        thead, tfoot{
+            background-color: rgb(82, 77, 77);
+            color: white;
+        }
+        .estado{
+            font-weight: bold;
+        }
+        #total{
+            font-weight: bolder;
+        }
+        caption{
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgrey;
+        }
+        /*podemos colocar k*n ou k*n-1 com k=1,2,3,4,.. e podemos usar even ou odd*/
+        /*com essa pseudo classe o estilo é aplicado com o passo que é passado como argumento*/
+        tbody > tr:nth-child(odd){
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <h1>Uso de tabelas grandes</h1>
+    <!--
+        Anatominha para Tabelas Grandes
+        TABLE
+            CAPTION
+            THEAD
+                TR, TD, TM
+            TBODY
+                TR, TD, TM
+            TFOOT
+                TR, TD, TM
+    -->
+    <table>
+        <caption>População das Áreas Federativas</caption>
+        <thead>
+            <tr>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 100px;">População</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="estado">São Paulo</td>
+                <td>45 919 049</td>
+            </tr>
+            <tr>
+                <td class="estado">Minas Gerais</td>
+                <td>21 168 791</td>
+            </tr>
+            <tr>
+                <td class="estado">Rio de Janeiro</td>
+                <td>17 264 943</td>
+            </tr>
+            <tr>
+                <td class="estado">Roraima</td>
+                <td>605 761</td>
+            </tr>
+            <tr>
+                <td class="estado">Amapá</td>
+                <td>845 731</td>
+            </tr>
+            <tr>
+                <td class="estado">Acre</td>
+                <td>881 935</td>
+            </tr>
+            <tr>
+                <td class="estado">Tocantins</td>
+                <td>1 572 866</td>
+            </tr>
+            <tr>
+                <td class="estado">Rondônia</td>
+                <td>1 777 225</td>
+            </tr>
+            <tr>
+                <td class="estado">Sergipe</td>
+                <td>2 298 696</td>
+            </tr>
+            <tr>
+                <td class="estado">Mato Grosso do Sul</td>
+                <td>2 778 986</td>
+            </tr>
+            <tr>
+                <td class="estado">Distrito Federal</td>
+                <td>3 015 268</td>
+            </tr>
+            <tr>
+                <td class="estado">Piauí</td>
+                <td>3 273 227</td>
+            </tr>
+            <tr>
+                <td class="estado">Alagoas</td>
+                <td>3 337 357</td>
+            </tr>
+            <tr>
+                <td class="estado">Mato Grosso</td>
+                <td>3 484 466</td>
+            </tr>
+            <tr>
+                <td class="estado">Rio Grande do Norte</td>
+                <td>3 506 853</td>
+            </tr>
+            <tr>
+                <td class="estado">Paraíba</td>
+                <td>4 018 127</td>
+            </tr>
+            <tr>
+                <td class="estado">Espírito Santo</td>
+                <td>4 018 650</td>
+            </tr>
+            <tr>
+                <td class="estado">Amazonas</td>
+                <td>4 164 597</td>
+            </tr>
+            <tr>
+                <td class="estado">Goiás</td>
+                <td>7 018 354</td>
+            </tr>
+            <tr>
+                <td class="estado">Maranhão</td>
+                <td>7 075 181</td>
+            </tr>
+            <tr>
+                <td class="estado">Santa Catarina</td>
+                <td>7 164 788</td>
+            </tr>
+            <tr>
+                <td class="estado">Pará</td>
+                <td>8 602 865</td>
+            </tr>
+            <tr>
+                <td class="estado">Ceará</td>
+                <td>9 132 078</td>
+            </tr>
+            <tr>
+                <td class="estado">Pernambuco</td>
+                <td>9 557 071</td>
+            </tr>
+            <tr>
+                <td class="estado">Rio Grande do Sul</td>
+                <td>11 377 239</td>
+            </tr>
+            <tr>
+                <td class="estado">Paraná</td>
+                <td>11 433 957</td>
+            </tr>
+            <tr>
+                <td class="estado">Bahia</td>
+                <td>14 873 064</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="row">Total de Habitantes</th>
+                <td id="total">210 147 125</td>
+            </tr>
+        </tfoot>
+    </table>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo quisquam, recusandae eligendi blanditiis quo maxime nulla nam alias, impedit voluptatem rem corrupti dolorem, odio architecto omnis fugiat maiores quam voluptates.
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia commodi soluta enim, eos illo dolor ex cupiditate ut, eligendi omnis, itaque delectus non aliquid autem culpa aut odit laboriosam molestias.
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis consequatur, consectetur magnam architecto voluptatibus cumque suscipit reiciendis! Nihil nam dolorum, voluptatibus facilis aliquid tempora illum et vel vero, repudiandae ratione?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum praesentium aliquid adipisci aspernatur, officia eligendi hic dolorum quas ratione perspiciatis a maiores pariatur, eaque labore voluptatum eius quod? Quaerat, perspiciatis.
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur cumque sunt aspernatur quam fugit voluptas, cupiditate maiores modi unde eveniet aliquid minima debitis fuga eligendi minus tenetur beatae exercitationem ab!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum reprehenderit aliquam autem tenetur omnis. Facilis, modi sed. Iste veritatis earum iusto voluptates officia ad aspernatur quasi, at maiores impedit consequatur!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, ipsa? Eaque accusantium beatae accusamus culpa nesciunt ducimus recusandae quam quasi quae unde, rerum optio autem hic! Est deleniti aspernatur autem?
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem quaerat quisquam, error deserunt facere nam. Quasi illum excepturi molestias accusamus doloribus labore exercitationem, vitae unde deleniti numquam soluta placeat qui.
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime repellat modi assumenda qui obcaecati ducimus, ullam alias recusandae consequuntur doloremque laborum cumque unde impedit aliquid iusto non vitae! Dolores, iste!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis nam quia deserunt culpa! Earum beatae aliquam amet, dolorem fugiat consequuntur sequi dolores non, quos vitae nesciunt quod tempora ea eos?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni, cum nesciunt. Ipsam corporis eum velit aspernatur temporibus dolorem explicabo nihil tempore fugiat repellendus iusto placeat, illo quibusdam aliquid deleniti nostrum.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi eligendi hic veniam accusantium! Autem debitis assumenda ipsa sunt. Dicta asperiores reiciendis, tenetur provident ipsam maxime iste? Praesentium voluptas delectus ratione?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est tenetur optio laboriosam nihil, sapiente quaerat nobis illo reprehenderit facilis consequuntur minima magnam fuga, voluptas doloremque, hic nulla vel tempora! Error?
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae sequi magnam nam perferendis est cumque voluptate minus quasi, eius consectetur dolor, recusandae, aliquid illo dolore alias. Ducimus recusandae suscipit expedita!
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam commodi animi in nemo corrupti, alias assumenda. Qui perspiciatis amet quo quod at ipsum, repellendus corporis porro voluptate facilis excepturi aspernatur.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, praesentium nam dicta inventore neque consectetur harum officiis possimus aspernatur odio explicabo pariatur sapiente accusantium, dolor amet non aperiam voluptate! Ratione?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis officia porro ullam accusantium, consectetur repellendus eos laudantium, harum nam sint deleniti laborum sapiente animi iusto debitis in neque deserunt nesciunt!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa facere ex fuga est vero natus! Commodi itaque nisi beatae, optio mollitia voluptatibus expedita cum maxime aliquid, distinctio labore. Quibusdam, cumque.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi delectus, esse unde laborum, numquam deserunt repudiandae a vel, earum asperiores quis molestias recusandae? Reiciendis repellat facilis asperiores perspiciatis debitis vel!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat dolorum rem ducimus corrupti totam dolores explicabo nemo, mollitia a? Nesciunt assumenda quae facilis laboriosam iste debitis voluptatum pariatur voluptate doloribus?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut voluptates tempora explicabo itaque quasi architecto, excepturi, harum, deserunt odit quis voluptas quibusdam. Consequatur, rem ad ea perferendis necessitatibus quas neque?
+    </p>
+    <section id="button">
+        <a href="index.html" target="_self" rel="prev"><img width="50px" src="../../../imagens/setavolta.png" alt="Botao de voltar"></a>
+    </section>
+</body>
+</html>

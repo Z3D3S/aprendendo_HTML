@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    font-weight: bolder;
+    background-color: #323031;
+    font-family: Arial, Helvetica, sans-serif;
+}
+footer,header{
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.219);
+    position: relative;
+    height: 10vh;
+    color: white;
+    text-align: center;
+    text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.288);
+    background-image: linear-gradient(to bottom,#2A2A72,#232528);
+}
+main{
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.380);
+    background-color: white;
+    margin: auto;
+    width: 100vw;
+    max-width: 900px;
+    height: 80vh;
+}   
+header > h1{
+    padding: 1.7vh;
+}
+footer > p{
+    padding: 3.4vh;
+}
+nav{
+    padding: 20px 10px;
+    text-align: center;
+}
+nav > a{
+    color: black;
+    text-decoration: none;
+    padding: 10px 0px;
+    display: none;
+}
+nav:hover > a{
+    width: 200px;
+    margin: auto;
+    display: block;
+}
+nav > a:hover{ 
+    border-radius: 10px;
+    background-color: #2A2A72;
+    transition-duration: 0.5s;
+}
+main > p{
+    text-align: justify;
+    padding: 20px;
+    padding-top: 0px;
+}
+section{
+    display: inline-table;
+}
+h2{
+    margin: 20px;
+}
+td > a{
+    color: black;
+    text-decoration: none;
+}
+tbody{
+    display: none;
+}
+table.menu:hover > tbody{
+    display: block;
+}
+td:hover > a{
+    color: #2A2A72;
+}
+#button{
+    padding-top: 20px;
+    padding-left: 20px;
+}
